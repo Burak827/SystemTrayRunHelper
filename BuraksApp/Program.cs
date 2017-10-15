@@ -61,21 +61,21 @@ namespace BuraksApp
                 Console.WriteLine("Executing finally block.");
             }
             Globals.myCommandObjects = new List<CommandObject>();
-            var objects = JsonConvert.DeserializeObject<List<CommandObject>>(input);
+            var objects = JsonConvert.DeserializeObject<List<CommandObject>>(input); 
             if (objects != null)
             {
                 Globals.myCommandObjects = objects;
             }
-
+             
         }
         private static ContextMenuStrip GetContext()
         {
             ContextMenuStrip CMS = new ContextMenuStrip();
             addCustomMenuItems(CMS);
             addDefaultMenuItems(CMS);
-            return CMS;
+            return CMS; 
         }
-
+         
         private static ContextMenuStrip addDefaultMenuItems(ContextMenuStrip CMS)
         {
             CMS.Items.Add(new ToolStripSeparator());
